@@ -1,0 +1,9 @@
+[package]
+name = "sqlx_issue"
+version = "0.1.0"
+authors = ["Wesley Norris <repnop@outlook.com>"]
+edition = "2018"
+
+[dependencies]
+async-std = { version = "1", features = ["attributes"] }
+sqlx = { git = "https://github.com/launchbadge/sqlx", rev = "80f402b7e61734a186a9a67bd95f74ad2103271c", features = ["mysql"] }

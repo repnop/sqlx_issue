@@ -1,0 +1,10 @@
+version: '3'
+services:
+    sqlx_issue:
+        build: .
+    mysql:
+        image: "mariadb:5.5.64"
+        volumes:
+            - ./make_table.sql:/docker-entrypoint-initdb.d/make_table.sql
+        environment:
+            MYSQL_ROOT_PASSWORD: supersecret
